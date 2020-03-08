@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="radio" name="radio" value="1" >天
+  <input type="radio" name="radio1" value="2" >周
+</body>
+</html>
+<script>
+
+  // var obj={};
+  // obj.a='1';
+  // obj.b='2';
+  // obj.c=3;
+  // obj.d=[1,2,3,5,7];
+  // console.log(obj);
+  // Object.keys(obj).forEach(function(index) {
+  //   if(obj[index] instanceof Array){
+  //     obj[index]=[];
+  //   }else if(typeof (obj[index]) == 'string'){
+  //     obj[index]='';
+  //   }else if(!isNaN(obj[index])){
+  //     obj[index]=null;
+  //   }
+  // });
+  //   // return obj;
+  // console.log(obj);
+</script>
+<script>
+function coversionTimeToSecond(str){
+  return str.split(':')[0]*3600+str.split(':')[1]*60;
+}
+function coversionTimeToHour(str){
+  var str1=Number(str);
+  var str2 = parseInt((str%3600)/60);
+  if(str2<10){
+    str2='0'+str2;
+  }
+  var str3 = Math.floor((str/3600));
+  if(str3<10){
+    str3='0'+str3;
+  }
+  return str3+':'+str2
+}
+function getHourMin(str){
+  var str1=Number(str);
+  var str2 = parseInt((str%3600)/60);
+  // if(str2<10){
+  //   str2='0'+str2;
+  // }
+  var str3 = Math.floor((str/3600));
+  // if(str3<10){
+  //   str3='0'+str3;
+  // }
+  return str3+'.'+str2
+}
+console.log(getHourMin('3660'))
+
+
+</script>
